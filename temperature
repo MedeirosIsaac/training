@@ -1,0 +1,20 @@
+entrada = input()
+
+temperatura_str, escala = entrada.split()
+temperatura = float(temperatura_str)
+
+if escala == 'C':
+    temp_c = temperatura
+elif escala == 'F':
+    temp_c = (temperatura - 32) * 5 / 9
+else :
+    temp_c = temperatura - 273.15
+
+
+temp_f = (temp_c * 9 / 5) + 32
+
+temp_k = temp_c + 273.15
+
+print(f"Temperatura em Celsius: {temp_c:.2f} °C")
+print(f"Temperatura em Fahrenheit: {temp_f:.2f} °F")
+print(f"Temperatura em Kelvin: {temp_k:.2f} °K")
