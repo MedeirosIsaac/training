@@ -1,0 +1,10 @@
+Questão 4
+
+Valor da questão: 1,00
+Leia um valor inteiro N que é o tamanho da matriz que deve ser impressa conforme o modelo fornecido.
+﻿
+Entrada
+A entrada contém um único inteiro N (3 ≤ N < 70), que determina o tamanho (linhas e colunas) de uma matriz que deve ser impressa.
+﻿
+Saída
+Para cada N lido, apresente a saída conforme o exemplo fornecido.
