@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int obstaculo, intervalo, num_pulos, pulo;
+
+    cin >> obstaculo >> intervalo >> num_pulos;
+
+    for(int i = 0; i < num_pulos; i++) {
+        cin >> pulo;
+        if(obstaculo <= pulo) {
+            break;
+        } else if(pulo == obstaculo -1) {
+            obstaculo += intervalo;
+        }
+    }
+
+    cout << obstaculo << endl;
+
+    return 0;
+}#include <iostream>
+using namespace std;
+
+int main() {
+    int obstaculo, intervalo, num_pulos, pulo;
+
+    cin >> obstaculo >> intervalo >> num_pulos;
+
+    int pulos[num_pulos];
+    for(int i = 0; i < num_pulos; i++) {
+        cin >> pulos[i];
+    }
+
+    for(int i = 0; i < num_pulos; i++) {
+        if(obstaculo <= pulos[i]) {
+            break;
+        } else if(pulos[i] == obstaculo - 1) {
+            obstaculo += intervalo;
+        }
+    }
+
+    /* sem arrays
+     for(int i = 0; i < num_pulos; i++) {
+        cin >> pulo;
+        if(obstaculo <= pulo) {
+            break;
+        } else if(pulo == obstaculo -1) {
+            obstaculo += intervalo;
+        }
+    }*/
+
+    cout << obstaculo << endl;
+
+    return 0;
+}
