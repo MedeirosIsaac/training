@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int obstaculo, pulo;
+    int num_pulos, num_intervalos;
+
+    cin >> num_intervalos >> num_pulos;
+
+    int intervalos[num_intervalos];
+    for(int i = 0; i < num_intervalos; i++) {
+        cin >> intervalos[i];
+    }
+
+    int intervalo_atual = 0;
+    int obstaculo = intervalos[intervalo_atual];
+
+    for(int i = 0; i < num_pulos; i++) {
+        int pulo;
+        cin >> pulo;
+
+        if(obstaculo <= pulo) {
+            break;
+        } else if(pulo == obstaculo - 1) {
+            intervalo_atual++;
+            if(intervalo_atual == num_intervalos) {
+                intervalo_atual = 0;
+            }
+            obstaculo += intervalos[intervalo_atual];
+        }
+    }
+
+
+    return 0;
+
+}
