@@ -1,0 +1,41 @@
+/*
+Numeros inteiros de um valor A até B
+*/
+
+void imprime_inteiros(int a, int b) {
+  cout << a << " ";
+  if (a < b) {
+      imprime_inteiros(a + 1, b);
+    }
+}
+
+imprime_inteiros(1, 10);
+imprime_inteiros(2, 10);
+imprime_inteiros(3, 10);
+
+
+
+void preencha_array(int a, int b, int n, int array[]) {
+    if (a <= b) {
+        array[n-1] = b;
+        preencha_array(a, b-1, n-1, array);
+    }
+}
+
+//fatorial
+void fat_duble(int a, int n){
+  if(n <= 0){
+    return 1;
+  }
+  return fat_duble(n, a - 2);
+}
+
+
+void inverte_array(int n, int array[]) {
+    if (n > 1) {
+        int aux = array[0];
+        array[0] = array[n-1];
+        array[n-1] = aux;
+        inverte_array(n-2, array+1);
+    }
+}
