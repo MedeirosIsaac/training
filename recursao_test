@@ -1,0 +1,16 @@
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+#include "atv_recusao.cpp"
+
+TEST_CASE("prencher um array"){
+    int array[] = {};
+    preencha_array(2, 4, 5, array);
+    CHECK(array[0] == 2);
+    CHECK(array[1] == 3);
+    CHECK(array[2] == 4);
+    CHECK(array[3] == 5);
+}
+
+TEST_CASE("fatorial duplo"){
+        
+}
